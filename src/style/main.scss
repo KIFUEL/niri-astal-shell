@@ -1,0 +1,10 @@
+@use "variables" as *;
+@use "bar";
+
+* {
+  all: unset;
+}
+
+window {
+  background-color: transparent;
+}

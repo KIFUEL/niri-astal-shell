@@ -1,0 +1,30 @@
+// Color Palette - Dark & Vibrant Modern
+$bg-base: #141318;
+$bg-surface: #1e1d24;
+$bg-surface-variant: #2b2933;
+$bg-hover: #373441;
+
+$text-primary: #e6e1e9;
+$text-secondary: #cac4d0;
+$text-muted: #938f99;
+
+$accent-primary: #c8bfff;
+$accent-secondary: #d7bafb;
+$accent-success: #a6e3a1;
+$accent-warning: #f9e2af;
+$accent-danger: #f38ba8;
+$accent-info: #89b4fa;
+
+// Typography & Geometry
+$font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+$font-size: 13px;
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+$border-radius-pill: 9999px;
+
+// Shadows & Borders
+$border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+$border-accent: 1px solid rgba($accent-primary, 0.4);
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);

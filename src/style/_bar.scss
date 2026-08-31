@@ -1,0 +1,134 @@
+@use "variables" as *;
+
+.Bar {
+  background-color: transparent;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $text-primary;
+
+  .bar-container {
+    background-color: rgba($bg-base, 0.88);
+    border: $border-subtle;
+    border-radius: $border-radius-md;
+    margin: 6px 10px 0 10px;
+    padding: 4px 8px;
+    box-shadow: $shadow-md;
+  }
+
+  // Common Pill Widget
+  .pill {
+    background-color: rgba($bg-surface, 0.85);
+    border: $border-subtle;
+    border-radius: $border-radius-pill;
+    padding: 3px 10px;
+    margin: 0 3px;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background-color: $bg-hover;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  // Workspaces
+  .workspaces {
+    .ws-btn {
+      min-width: 24px;
+      min-height: 24px;
+      padding: 0 6px;
+      margin: 0 2px;
+      border-radius: $border-radius-pill;
+      background-color: transparent;
+      color: $text-muted;
+      border: none;
+      transition: all 180ms ease;
+
+      &.active {
+        background-color: $accent-primary;
+        color: $bg-base;
+        font-weight: bold;
+      }
+
+      &.occupied:not(.active) {
+        color: $text-primary;
+        background-color: rgba($bg-surface-variant, 0.6);
+      }
+
+      &:hover:not(.active) {
+        background-color: $bg-hover;
+        color: $text-primary;
+      }
+    }
+  }
+
+  // Focused Window Title
+  .focused-title {
+    color: $text-secondary;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  // Clock
+  .clock {
+    color: $text-primary;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    .date-label {
+      color: $accent-secondary;
+      margin-right: 6px;
+    }
+  }
+
+  // Media Player
+  .media {
+    color: $accent-primary;
+
+    .media-icon {
+      margin-right: 6px;
+    }
+  }
+
+  // System indicators (Audio, Battery, Network)
+  .indicator {
+    padding: 2px 8px;
+    border-radius: $border-radius-pill;
+
+    &.audio {
+      color: $accent-info;
+      &.muted { color: $accent-danger; }
+    }
+
+    &.battery {
+      color: $accent-success;
+      &.charging { color: $accent-warning; }
+      &.low { color: $accent-danger; }
+    }
+
+    &.network {
+      color: $accent-secondary;
+    }
+  }
+
+  // Tray
+  .tray-item {
+    margin: 0 2px;
+    border-radius: $border-radius-sm;
+    padding: 2px 4px;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+  }
+
+  // Power button
+  .power-btn {
+    color: $accent-danger;
+    padding: 2px 8px;
+    border-radius: $border-radius-pill;
+
+    &:hover {
+      background-color: rgba($accent-danger, 0.2);
+    }
+  }
+}
