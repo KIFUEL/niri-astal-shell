@@ -31,7 +31,7 @@ export default function AppLauncher(gdkmonitor: Gdk.Monitor) {
       layer={Astal.Layer.OVERLAY}
       visible={false}
       application={app}
-      keymode={Astal.Keymode.EXCLUSIVE}
+      keymode={Astal.Keymode.ON_DEMAND}
       onKeyPressEvent={(_, event) => {
         if (event.get_keyval()[1] === Gdk.KEY_Escape) {
           app.toggle_window("AppLauncher")
