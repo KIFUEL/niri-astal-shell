@@ -8,7 +8,7 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
 
 - **Repositorio:** [https://github.com/KIFUEL/niri-astal-shell](https://github.com/KIFUEL/niri-astal-shell)
 - **Sesión del sistema:** `niri-astal-session` (`/usr/share/wayland-sessions/niri-astal.desktop`)
-- **Progreso general:** **~75%** completado.
+- **Progreso general:** **~90%** completado.
 
 ---
 
@@ -26,6 +26,7 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
   - [x] Widget de Audio WirePlumber con ajuste de volumen por scroll y clic para mutear (`Audio.tsx`).
   - [x] Bandeja del sistema completa para apps de fondo (`SysTray.tsx`).
   - [x] Reproductor multimedia compacto MPRIS (`Media.tsx`).
+  - [x] Botones de acceso rápido para Apps y Power Menu.
 
 - [x] **Fase 3: Integración Específica con Niri IPC**
   - [x] Indicador interactivo de workspaces para Niri (`Workspaces.tsx`).
@@ -44,9 +45,11 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
   - [x] Centro de notificaciones con historial y botón "Clear all".
   - [x] Botón de activación en la barra y atajo de teclado en Niri (<kbd>Mod</kbd> + <kbd>N</kbd>).
 
-- [ ] **Fase 6: App Launcher & Power Menu**
-  - [ ] Ventana modal centrada para el lanzador de aplicaciones con búsqueda fuzzy rápida (`AstalApps`).
-  - [ ] Modal visual de confirmación para bloqueo, suspensión, reinicio y apagado.
+- [x] **Fase 6: App Launcher & Power Menu**
+  - [x] Ventana modal centrada para el lanzador de aplicaciones con búsqueda fuzzy rápida (`AstalApps`).
+  - [x] Ejecución directa con <kbd>Enter</kbd> y cierre con <kbd>Escape</kbd>.
+  - [x] Modal visual de confirmación para Bloqueo, Suspensión, Salida, Reinicio y Apagado.
+  - [x] Atajos integrados en Niri: <kbd>Mod</kbd> + <kbd>Espacio</kbd> (Launcher) y <kbd>Super</kbd> + <kbd>X</kbd> (Power Menu).
 
 - [ ] **Fase 7: Theming Dinámico y Pulido Final**
   - [ ] Generador de colores dinámicos o temas claro/oscuro.
