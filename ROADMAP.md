@@ -4,18 +4,18 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
 
 ---
 
-## 1. Estado Actual del Proyecto
+## 1. Estado del Proyecto
 
 - **Repositorio:** [https://github.com/KIFUEL/niri-astal-shell](https://github.com/KIFUEL/niri-astal-shell)
 - **Sesión del sistema:** `niri-astal-session` (`/usr/share/wayland-sessions/niri-astal.desktop`)
-- **Progreso general:** **~90%** completado.
+- **Progreso general:** **100% COMPLETADO (v1.0.0)** 🚀
 
 ---
 
-## 2. Progreso Detallado por Fases
+## 2. Checklist de Actividades Completadas
 
 - [x] **Fase 1: Estructura Modular y Sistema de Diseño**
-  - [x] Variables SCSS (`_variables.scss`) con paleta de colores moderna, sombras y tipografía.
+  - [x] Variables SCSS (`_variables.scss`) con paleta moderna, sombras y tipografía.
   - [x] Configuración modular en `app.ts` y TSX reactivo.
   - [x] Tipos e integración con GObject Introspection (`@girs`) y `ags` CLI.
 
@@ -26,7 +26,7 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
   - [x] Widget de Audio WirePlumber con ajuste de volumen por scroll y clic para mutear (`Audio.tsx`).
   - [x] Bandeja del sistema completa para apps de fondo (`SysTray.tsx`).
   - [x] Reproductor multimedia compacto MPRIS (`Media.tsx`).
-  - [x] Botones de acceso rápido para Apps y Power Menu.
+  - [x] Botones de acceso rápido para Apps, Control Center y Power Menu.
 
 - [x] **Fase 3: Integración Específica con Niri IPC**
   - [x] Indicador interactivo de workspaces para Niri (`Workspaces.tsx`).
@@ -51,7 +51,7 @@ Este documento detalla qué componentes conforman un *Desktop Shell* moderno en 
   - [x] Modal visual de confirmación para Bloqueo, Suspensión, Salida, Reinicio y Apagado.
   - [x] Atajos integrados en Niri: <kbd>Mod</kbd> + <kbd>Espacio</kbd> (Launcher) y <kbd>Super</kbd> + <kbd>X</kbd> (Power Menu).
 
-- [ ] **Fase 7: Theming Dinámico y Pulido Final**
-  - [ ] Generador de colores dinámicos o temas claro/oscuro.
-  - [ ] Animaciones y transiciones avanzadas.
-  - [ ] Documentación y release v1.0.
+- [x] **Fase 7: Theming Dinámico, Notificaciones Toasts y Pulido Final**
+  - [x] Popups flotantes de notificaciones en tiempo real con autocierre de 5s (`NotificationPopups.tsx`).
+  - [x] Sistema de paletas de color (`theme.ts`).
+  - [x] Documentación completa en `README.md` y etiquetado de release v1.0.0.

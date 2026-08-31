@@ -5,6 +5,7 @@ import OSD from "./src/widgets/OSD"
 import ControlCenter from "./src/widgets/ControlCenter"
 import AppLauncher from "./src/widgets/Launcher"
 import PowerMenu from "./src/widgets/PowerMenu"
+import NotificationPopups from "./src/widgets/Notifications"
 
 app.start({
   css: style,
@@ -30,6 +31,7 @@ app.start({
       ControlCenter(monitor)
       AppLauncher(monitor)
       PowerMenu(monitor)
+      NotificationPopups(monitor)
     })
   },
 })
