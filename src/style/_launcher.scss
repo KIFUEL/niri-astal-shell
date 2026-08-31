@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+.AppLauncher {
+  background-color: transparent;
+
+  .launcher-container {
+    background-color: rgba($bg-base, 0.94);
+    border: $border-subtle;
+    border-radius: $border-radius-lg;
+    padding: 20px;
+    box-shadow: $shadow-md;
+    min-width: 480px;
+    min-height: 420px;
+  }
+
+  .search-entry {
+    background-color: rgba($bg-surface, 0.9);
+    border: $border-subtle;
+    border-radius: $border-radius-md;
+    padding: 10px 14px;
+    font-size: 15px;
+    color: $text-primary;
+    margin-bottom: 14px;
+    transition: all 180ms ease;
+
+    &:focus {
+      border-color: $accent-primary;
+      background-color: $bg-surface-variant;
+    }
+  }
+
+  .app-list {
+    min-height: 320px;
+
+    .app-item {
+      padding: 8px 12px;
+      margin-bottom: 4px;
+      border-radius: $border-radius-md;
+      background-color: transparent;
+      transition: all 150ms ease;
+
+      .app-icon {
+        font-size: 32px;
+        margin-right: 14px;
+      }
+
+      .app-name {
+        font-weight: 600;
+        font-size: 13px;
+        color: $text-primary;
+      }
+
+      .app-desc {
+        font-size: 11px;
+        color: $text-muted;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $bg-hover;
+
+        .app-name {
+          color: $accent-primary;
+        }
+      }
+    }
+  }
+}

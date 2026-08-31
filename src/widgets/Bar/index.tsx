@@ -21,8 +21,15 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       application={app}
     >
       <centerbox class="bar-container">
-        {/* Left: Workspaces & Window Title */}
+        {/* Left: App Launcher, Workspaces & Window Title */}
         <box $type="start" halign={Gtk.Align.START}>
+          <button
+            class="pill indicator"
+            onClicked={() => app.toggle_window("AppLauncher")}
+            tooltipText="Applications"
+          >
+            <icon icon="view-app-grid-symbolic" />
+          </button>
           <Workspaces />
           <FocusedTitle />
         </box>
@@ -45,6 +52,13 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
             tooltipText="Control Center"
           >
             <icon icon="open-menu-symbolic" />
+          </button>
+          <button
+            class="pill indicator power-btn"
+            onClicked={() => app.toggle_window("PowerMenu")}
+            tooltipText="Power Menu"
+          >
+            <icon icon="system-shutdown-symbolic" />
           </button>
         </box>
       </centerbox>

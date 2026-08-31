@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+.PowerMenu {
+  background-color: transparent;
+
+  .powermenu-container {
+    background-color: rgba($bg-base, 0.95);
+    border: $border-subtle;
+    border-radius: $border-radius-lg;
+    padding: 24px 28px;
+    box-shadow: $shadow-md;
+
+    .powermenu-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: $text-primary;
+      margin-bottom: 18px;
+    }
+
+    .power-btn-card {
+      background-color: rgba($bg-surface, 0.85);
+      border: $border-subtle;
+      border-radius: $border-radius-md;
+      padding: 16px 20px;
+      margin: 0 6px;
+      min-width: 90px;
+      min-height: 90px;
+      transition: all 180ms ease;
+
+      .power-icon {
+        font-size: 28px;
+        margin-bottom: 8px;
+        color: $text-primary;
+      }
+
+      .power-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-secondary;
+      }
+
+      &:hover {
+        background-color: $bg-hover;
+        border-color: rgba(255, 255, 255, 0.2);
+
+        &.shutdown {
+          background-color: rgba($accent-danger, 0.2);
+          .power-icon, .power-label { color: $accent-danger; }
+        }
+
+        &.reboot {
+          background-color: rgba($accent-warning, 0.2);
+          .power-icon, .power-label { color: $accent-warning; }
+        }
+
+        &.lock {
+          background-color: rgba($accent-info, 0.2);
+          .power-icon, .power-label { color: $accent-info; }
+        }
+
+        &.logout {
+          background-color: rgba($accent-secondary, 0.2);
+          .power-icon, .power-label { color: $accent-secondary; }
+        }
+      }
+    }
+  }
+}
