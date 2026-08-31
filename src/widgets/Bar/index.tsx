@@ -33,12 +33,19 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
           <Media />
         </box>
 
-        {/* Right: System Tray & Status Indicators */}
+        {/* Right: System Tray, Indicators & Control Center toggle */}
         <box $type="end" halign={Gtk.Align.END}>
           <SysTray />
           <NetworkIndicator />
           <AudioIndicator />
           <BatteryIndicator />
+          <button
+            class="pill indicator"
+            onClicked={() => app.toggle_window("ControlCenter")}
+            tooltipText="Control Center"
+          >
+            <icon icon="open-menu-symbolic" />
+          </button>
         </box>
       </centerbox>
     </window>

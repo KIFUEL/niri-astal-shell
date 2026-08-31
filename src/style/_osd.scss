@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+.OSD {
+  background-color: transparent;
+
+  .osd-container {
+    background-color: rgba($bg-base, 0.92);
+    border: $border-subtle;
+    border-radius: $border-radius-lg;
+    padding: 16px 20px;
+    margin-bottom: 60px;
+    box-shadow: $shadow-md;
+    min-width: 220px;
+
+    .osd-icon {
+      font-size: 24px;
+      color: $accent-primary;
+      margin-bottom: 8px;
+    }
+
+    .osd-label {
+      color: $text-primary;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    levelbar {
+      trough {
+        min-height: 8px;
+        border-radius: $border-radius-pill;
+        background-color: rgba($bg-surface-variant, 0.8);
+      }
+
+      block.filled {
+        border-radius: $border-radius-pill;
+        background-color: $accent-primary;
+      }
+    }
+  }
+}

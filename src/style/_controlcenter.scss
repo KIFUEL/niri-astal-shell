@@ -1,0 +1,183 @@
+@use "variables" as *;
+
+.ControlCenter {
+  background-color: transparent;
+
+  .control-center-panel {
+    background-color: rgba($bg-base, 0.94);
+    border: $border-subtle;
+    border-radius: $border-radius-lg;
+    padding: 16px;
+    margin: 6px 12px 0 0;
+    box-shadow: $shadow-md;
+    min-width: 360px;
+    min-height: 480px;
+  }
+
+  // Header
+  .header {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: $border-subtle;
+
+    .user-name {
+      font-weight: bold;
+      color: $text-primary;
+      font-size: 15px;
+    }
+
+    .uptime {
+      color: $text-muted;
+      font-size: 11px;
+    }
+
+    .action-btn {
+      padding: 6px 8px;
+      border-radius: $border-radius-pill;
+      background-color: rgba($bg-surface, 0.8);
+      color: $text-primary;
+      margin-left: 6px;
+
+      &:hover {
+        background-color: $bg-hover;
+      }
+
+      &.power {
+        color: $accent-danger;
+      }
+    }
+  }
+
+  // Quick Toggles Grid
+  .toggles-grid {
+    margin-bottom: 12px;
+
+    .toggle-btn {
+      background-color: rgba($bg-surface, 0.85);
+      border: $border-subtle;
+      border-radius: $border-radius-md;
+      padding: 10px;
+      margin: 4px;
+      transition: all 180ms ease;
+
+      .toggle-icon {
+        font-size: 18px;
+        color: $text-muted;
+        margin-right: 8px;
+      }
+
+      .toggle-label {
+        font-weight: 500;
+        font-size: 12px;
+        color: $text-secondary;
+      }
+
+      &.active {
+        background-color: $accent-primary;
+
+        .toggle-icon {
+          color: $bg-base;
+        }
+
+        .toggle-label {
+          color: $bg-base;
+          font-weight: bold;
+        }
+      }
+
+      &:hover:not(.active) {
+        background-color: $bg-hover;
+      }
+    }
+  }
+
+  // Sliders Section
+  .sliders-section {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background-color: rgba($bg-surface, 0.6);
+    border-radius: $border-radius-md;
+
+    .slider-row {
+      margin: 4px 0;
+
+      .slider-icon {
+        color: $accent-info;
+        margin-right: 10px;
+      }
+
+      scale {
+        trough {
+          min-height: 6px;
+          border-radius: $border-radius-pill;
+          background-color: rgba($bg-surface-variant, 0.8);
+        }
+
+        highlight {
+          border-radius: $border-radius-pill;
+          background-color: $accent-info;
+        }
+      }
+    }
+  }
+
+  // Notification Section
+  .notifications-section {
+    .section-title {
+      font-weight: bold;
+      color: $text-primary;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .clear-btn {
+      font-size: 11px;
+      color: $accent-primary;
+      padding: 2px 6px;
+      border-radius: $border-radius-sm;
+
+      &:hover {
+        background-color: $bg-hover;
+      }
+    }
+
+    .notif-list {
+      min-height: 120px;
+
+      .empty-label {
+        color: $text-muted;
+        font-size: 12px;
+        margin-top: 30px;
+      }
+
+      .notif-card {
+        background-color: rgba($bg-surface, 0.8);
+        border: $border-subtle;
+        border-radius: $border-radius-md;
+        padding: 10px;
+        margin-bottom: 6px;
+
+        .notif-summary {
+          font-weight: bold;
+          color: $text-primary;
+          font-size: 12px;
+        }
+
+        .notif-body {
+          color: $text-secondary;
+          font-size: 11px;
+          margin-top: 2px;
+        }
+
+        .notif-close {
+          color: $text-muted;
+          padding: 2px 4px;
+
+          &:hover {
+            color: $accent-danger;
+          }
+        }
+      }
+    }
+  }
+}
